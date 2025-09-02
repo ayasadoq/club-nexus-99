@@ -61,17 +61,23 @@ const Index = () => {
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-foreground">
-              Welcome back, <span className="bg-gradient-primary bg-clip-text text-transparent">John</span>!
+            <h1 className="text-4xl font-bold font-orbitron text-foreground">
+              Welcome back, <span className="bg-gradient-primary bg-clip-text text-transparent animate-pulse">John</span>!
             </h1>
-            <p className="text-muted-foreground mt-1">
+            <p className="text-muted-foreground mt-2 font-jetbrains text-lg">
               Here's what's happening in your club today
             </p>
+            <div className="mt-4 flex items-center space-x-2">
+              <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+              <span className="text-sm text-success font-jetbrains">System Online</span>
+              <div className="w-1 h-1 bg-muted-foreground rounded-full"></div>
+              <span className="text-sm text-muted-foreground font-jetbrains">Last sync: 2 min ago</span>
+            </div>
           </div>
           <div className="hidden sm:block">
             <div className="animate-float">
-              <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-lg">
-                <GraduationCap className="w-8 h-8 text-primary-foreground" />
+              <div className="w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-lg animate-pulse-glow border border-primary/20">
+                <GraduationCap className="w-10 h-10 text-primary-foreground" />
               </div>
             </div>
           </div>
@@ -101,27 +107,30 @@ const Index = () => {
       </div>
 
       {/* Quick Actions */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Button className="btn-gradient h-16 text-left justify-start space-x-3 hover:scale-105 transition-transform">
-          <Plus className="w-5 h-5" />
-          <div>
-            <div className="font-medium">Join a Project</div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Button className="btn-gradient h-20 text-left justify-start space-x-4 hover:scale-105 transition-all group border border-primary/20 font-jetbrains relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <Plus className="w-6 h-6 group-hover:rotate-90 transition-transform z-10" />
+          <div className="z-10">
+            <div className="font-medium font-orbitron">Join a Project</div>
             <div className="text-xs opacity-90">Find exciting projects to contribute</div>
           </div>
         </Button>
         
-        <Button className="btn-accent h-16 text-left justify-start space-x-3 hover:scale-105 transition-transform">
-          <GraduationCap className="w-5 h-5" />
-          <div>
-            <div className="font-medium">Register for Training</div>
+        <Button className="btn-accent h-20 text-left justify-start space-x-4 hover:scale-105 transition-all group border border-accent/20 font-jetbrains relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <GraduationCap className="w-6 h-6 group-hover:rotate-12 transition-transform z-10" />
+          <div className="z-10">
+            <div className="font-medium font-orbitron">Register for Training</div>
             <div className="text-xs opacity-90">Enhance your skills</div>
           </div>
         </Button>
         
-        <Button variant="outline" className="h-16 text-left justify-start space-x-3 border-2 hover:bg-muted/50 hover:scale-105 transition-all">
-          <Calendar className="w-5 h-5" />
-          <div>
-            <div className="font-medium">View Event Calendar</div>
+        <Button variant="outline" className="h-20 text-left justify-start space-x-4 border-2 border-primary/30 hover:bg-gradient-card hover:border-primary hover:scale-105 transition-all group font-jetbrains relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <Calendar className="w-6 h-6 group-hover:scale-110 transition-transform z-10" />
+          <div className="z-10">
+            <div className="font-medium font-orbitron">View Event Calendar</div>
             <div className="text-xs text-muted-foreground">See upcoming events</div>
           </div>
         </Button>
@@ -132,27 +141,32 @@ const Index = () => {
         {/* Announcements */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold text-foreground">Latest Announcements</h2>
-            <Button variant="ghost" size="sm" className="text-primary hover:text-primary-dark">
-              View all <ArrowRight className="w-4 h-4 ml-1" />
+            <h2 className="text-2xl font-semibold font-orbitron text-foreground">Latest Announcements</h2>
+            <Button variant="ghost" size="sm" className="text-primary hover:text-primary-dark font-jetbrains group">
+              View all <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
           
           <div className="space-y-3">
-            {announcements.map((announcement) => (
-              <div key={announcement.id} className="card-elevated p-4 rounded-lg border border-border/50">
-                <div className="space-y-2">
+            {announcements.map((announcement, index) => (
+              <div key={announcement.id} className="card-elevated p-5 rounded-lg border border-primary/20 hover:border-primary/40 transition-all group relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-primary"></div>
+                <div className="space-y-3 relative z-10">
                   <div className="flex items-start justify-between">
-                    <h3 className="font-medium text-foreground line-clamp-1">
+                    <h3 className="font-medium font-orbitron text-foreground line-clamp-1 group-hover:text-primary transition-colors">
                       {announcement.title}
                     </h3>
-                    <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
+                    <span className="text-xs text-muted-foreground font-jetbrains whitespace-nowrap ml-2">
                       {announcement.date}
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
+                  <p className="text-sm text-muted-foreground font-jetbrains line-clamp-2">
                     {announcement.content}
                   </p>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-1 h-1 bg-accent rounded-full animate-pulse"></div>
+                    <span className="text-xs text-accent font-jetbrains">Priority {index === 0 ? 'High' : 'Normal'}</span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -162,25 +176,31 @@ const Index = () => {
         {/* Recent Activity */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold text-foreground">Recent Activity</h2>
-            <Button variant="ghost" size="sm" className="text-primary hover:text-primary-dark">
-              View all <ArrowRight className="w-4 h-4 ml-1" />
+            <h2 className="text-2xl font-semibold font-orbitron text-foreground">Recent Activity</h2>
+            <Button variant="ghost" size="sm" className="text-primary hover:text-primary-dark font-jetbrains group">
+              View all <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
           
           <div className="space-y-3">
-            {recentActivity.map((activity) => (
-              <div key={activity.id} className="card-elevated p-4 rounded-lg border border-border/50 hover:border-primary/20 transition-colors">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <div className="space-y-1 flex-1 min-w-0">
-                    <p className="text-sm font-medium text-foreground line-clamp-1">
+            {recentActivity.map((activity, index) => (
+              <div key={activity.id} className="card-elevated p-5 rounded-lg border border-primary/20 hover:border-primary/40 transition-all group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="flex items-start space-x-4 relative z-10">
+                  <div className="w-3 h-3 bg-gradient-primary rounded-full mt-1.5 flex-shrink-0 animate-pulse"></div>
+                  <div className="space-y-2 flex-1 min-w-0">
+                    <p className="text-sm font-medium font-orbitron text-foreground line-clamp-1 group-hover:text-primary transition-colors">
                       {activity.title}
                     </p>
-                    <div className="flex items-center space-x-2 text-xs text-muted-foreground">
-                      <span>by {activity.user}</span>
+                    <div className="flex items-center space-x-3 text-xs text-muted-foreground font-jetbrains">
+                      <span className="flex items-center space-x-1">
+                        <div className="w-1 h-1 bg-accent rounded-full"></div>
+                        <span>by {activity.user}</span>
+                      </span>
                       <span>•</span>
                       <span>{activity.time}</span>
+                      <span>•</span>
+                      <span className="text-accent">Live</span>
                     </div>
                   </div>
                 </div>

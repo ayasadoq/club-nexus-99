@@ -2,39 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Student Club App Design System - Modern Educational Theme
-All colors MUST be HSL.
+/* Futuristic Tech Dashboard Design System - Dark IT Style
+All colors MUST be HSL. Cyberpunk-inspired with coding aesthetics.
 */
 
 @layer base {
   :root {
-    /* Base Colors */
-    --background: 0 0% 100%;
-    --foreground: 220 14% 20%;
+    /* Base Colors - Futuristic Light Mode */
+    --background: 214 15% 97%;
+    --foreground: 214 35% 15%;
 
     /* Card System */
     --card: 0 0% 100%;
-    --card-foreground: 220 14% 20%;
+    --card-foreground: 214 35% 15%;
 
     /* Interactive Elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 220 14% 20%;
+    --popover-foreground: 214 35% 15%;
 
-    /* Brand Colors - Deep Blue Primary */
-    --primary: 220 85% 57%;
+    /* Brand Colors - Cyberpunk Blue */
+    --primary: 214 100% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 220 70% 70%;
-    --primary-dark: 220 90% 45%;
+    --primary-light: 214 85% 75%;
+    --primary-dark: 214 100% 45%;
 
-    /* Secondary - Violet Academic */
-    --secondary: 250 65% 90%;
-    --secondary-foreground: 250 60% 30%;
-    --secondary-accent: 250 80% 65%;
+    /* Secondary - Electric Purple */
+    --secondary: 280 100% 90%;
+    --secondary-foreground: 280 60% 25%;
+    --secondary-accent: 280 100% 70%;
 
-    /* Accent - Orange Energy */
-    --accent: 25 95% 60%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 25 100% 75%;
+    /* Accent - Neon Cyan */
+    --accent: 190 100% 50%;
+    --accent-foreground: 214 35% 15%;
+    --accent-light: 190 100% 70%;
 
     /* Status Colors */
     --success: 142 76% 36%;
@@ -51,11 +51,11 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 220 85% 57%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220, 85%, 57%), hsl(250, 80%, 65%));
-    --gradient-secondary: linear-gradient(135deg, hsl(250, 65%, 90%), hsl(220, 70%, 95%));
-    --gradient-accent: linear-gradient(135deg, hsl(25, 95%, 60%), hsl(35, 95%, 70%));
-    --gradient-card: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(220, 13%, 98%));
+    /* Gradients - Cyberpunk Tech */
+    --gradient-primary: linear-gradient(135deg, hsl(214, 100%, 60%), hsl(280, 100%, 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(280, 100%, 90%), hsl(214, 85%, 95%));
+    --gradient-accent: linear-gradient(135deg, hsl(190, 100%, 50%), hsl(214, 100%, 60%));
+    --gradient-card: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(214, 15%, 97%));
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(220, 85%, 57%, 0.05);
@@ -87,33 +87,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Base Colors */
-    --background: 220 20% 8%;
-    --foreground: 220 13% 95%;
+    /* Base Colors - Dark Tech Matrix */
+    --background: 214 25% 6%;
+    --foreground: 214 15% 90%;
 
     /* Card System */
-    --card: 220 15% 12%;
-    --card-foreground: 220 13% 95%;
+    --card: 214 20% 10%;
+    --card-foreground: 214 15% 90%;
 
     /* Interactive Elements */
-    --popover: 220 15% 12%;
-    --popover-foreground: 220 13% 95%;
+    --popover: 214 20% 10%;
+    --popover-foreground: 214 15% 90%;
 
-    /* Brand Colors - Bright Blue for Dark Mode */
-    --primary: 220 85% 65%;
-    --primary-foreground: 220 20% 8%;
-    --primary-light: 220 70% 75%;
-    --primary-dark: 220 90% 55%;
+    /* Brand Colors - Electric Blue */
+    --primary: 214 100% 70%;
+    --primary-foreground: 214 25% 6%;
+    --primary-light: 214 85% 80%;
+    --primary-dark: 214 100% 55%;
 
-    /* Secondary - Violet Academic */
-    --secondary: 250 20% 20%;
-    --secondary-foreground: 250 65% 85%;
-    --secondary-accent: 250 80% 70%;
+    /* Secondary - Electric Purple */
+    --secondary: 280 50% 20%;
+    --secondary-foreground: 280 100% 85%;
+    --secondary-accent: 280 100% 75%;
 
-    /* Accent - Orange Energy */
-    --accent: 25 95% 65%;
-    --accent-foreground: 220 20% 8%;
-    --accent-light: 25 100% 80%;
+    /* Accent - Neon Cyan */
+    --accent: 190 100% 60%;
+    --accent-foreground: 214 25% 6%;
+    --accent-light: 190 100% 75%;
 
     /* Status Colors */
     --success: 142 76% 45%;
@@ -130,25 +130,25 @@ All colors MUST be HSL.
     --input: 220 15% 18%;
     --ring: 220 85% 65%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220, 85%, 65%), hsl(250, 80%, 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(250, 20%, 20%), hsl(220, 15%, 25%));
-    --gradient-accent: linear-gradient(135deg, hsl(25, 95%, 65%), hsl(35, 95%, 75%));
-    --gradient-card: linear-gradient(135deg, hsl(220, 15%, 12%), hsl(220, 15%, 15%));
+    /* Gradients - Dark Cyberpunk */
+    --gradient-primary: linear-gradient(135deg, hsl(214, 100%, 70%), hsl(280, 100%, 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(280, 50%, 20%), hsl(214, 20%, 15%));
+    --gradient-accent: linear-gradient(135deg, hsl(190, 100%, 60%), hsl(214, 100%, 70%));
+    --gradient-card: linear-gradient(135deg, hsl(214, 20%, 10%), hsl(214, 15%, 12%));
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(220, 85%, 10%, 0.3);
     --shadow-md: 0 4px 6px -1px hsl(220, 85%, 10%, 0.4), 0 2px 4px -1px hsl(220, 85%, 10%, 0.2);
     --shadow-lg: 0 10px 15px -3px hsl(220, 85%, 10%, 0.4), 0 4px 6px -2px hsl(220, 85%, 10%, 0.2);
     --shadow-glow: 0 0 20px hsl(220, 85%, 65%, 0.4);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 214 30% 8%;
+    --sidebar-foreground: 214 15% 90%;
+    --sidebar-primary: 214 100% 70%;
+    --sidebar-primary-foreground: 214 30% 8%;
+    --sidebar-accent: 214 25% 12%;
+    --sidebar-accent-foreground: 214 15% 90%;
+    --sidebar-border: 214 20% 15%;
+    --sidebar-ring: 214 100% 70%;
   }
 }
 
@@ -158,7 +158,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground font-orbitron;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(214 100% 60% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(280 100% 70% / 0.05) 0%, transparent 50%);
   }
 
   html {
@@ -222,4 +225,25 @@ All colors MUST be HSL.
 @keyframes glow {
   from { box-shadow: var(--shadow-md); }
   to { box-shadow: var(--shadow-glow); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 5px hsl(214 100% 70% / 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 20px hsl(214 100% 70% / 0.6), 0 0 30px hsl(280 100% 70% / 0.4);
+  }
+}
+
+@keyframes data-flow {
+  0% { transform: translateX(-100%) scaleX(0); }
+  50% { transform: translateX(0%) scaleX(1); }
+  100% { transform: translateX(100%) scaleX(0); }
+}
+
+@keyframes matrix-rain {
+  0% { opacity: 0; transform: translateY(-10px); }
+  50% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(10px); }
 }
