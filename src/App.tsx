@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
+import Calendar from "./pages/Calendar";
+import Notifications from "./pages/Notifications";
 import Trainings from "./pages/Trainings";
 import MemberProfile from "./pages/MemberProfile";
 import NotFound from "./pages/NotFound";
@@ -22,7 +24,8 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
             <Route path="projects" element={<Projects />} />
-            <Route path="calendar" element={<div className="p-8 text-center"><h1 className="text-2xl font-bold font-orbitron bg-gradient-primary bg-clip-text text-transparent">Calendar - Coming Soon</h1></div>} />
+            <Route path="calendar" element={<Calendar />} />
+            <Route path="notifications" element={<Notifications />} />
             <Route path="trainings" element={<Trainings />} />
             <Route path="profile" element={<MemberProfile />} />
           </Route>

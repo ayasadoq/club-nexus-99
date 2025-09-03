@@ -22,6 +22,7 @@ const Layout = () => {
     { name: 'Home', href: '/', icon: Home },
     { name: 'Projects', href: '/projects', icon: FolderKanban },
     { name: 'Calendar', href: '/calendar', icon: Calendar },
+    { name: 'Notifications', href: '/notifications', icon: Bell, badge: 3 },
     { name: 'Trainings & Resources', href: '/trainings', icon: GraduationCap },
     { name: 'Member Profile', href: '/profile', icon: Users },
   ];
@@ -81,7 +82,14 @@ const Layout = () => {
                   )}
                   onClick={() => setSidebarOpen(false)}
                 >
-                  <Icon className={cn("w-5 h-5 transition-transform group-hover:scale-110", isActive && "animate-pulse")} />
+                  <div className="relative">
+                    <Icon className={cn("w-5 h-5 transition-transform group-hover:scale-110", isActive && "animate-pulse")} />
+                    {item.badge && (
+                      <span className="absolute -top-1 -right-1 w-4 h-4 bg-accent text-accent-foreground text-xs rounded-full flex items-center justify-center animate-pulse-glow">
+                        {item.badge}
+                      </span>
+                    )}
+                  </div>
                   <span className="relative">
                     {item.name}
                     {isActive && (
